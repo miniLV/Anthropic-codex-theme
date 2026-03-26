@@ -1,0 +1,7 @@
+{
+  "editor.fontFamily": "Anthropic Mono, JetBrains Mono, Berkeley Mono, SF Mono, Menlo, monospace",
+  "editor.fontWeight": "450",
+  "terminal.integrated.fontFamily": "Anthropic Mono, JetBrains Mono, Berkeley Mono, SF Mono, Menlo, monospace",
+  "terminal.integrated.fontWeight": "450",
+  "markdown.preview.fontFamily": "Anthropic Serif, Iowan Old Style, Georgia, serif"
+}
