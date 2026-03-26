@@ -1,8 +1,8 @@
 const fonts = {
-  brand: {
-    ui: 'AnthropicSans, "Styrene B", "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-    code: 'AnthropicMono, "JetBrains Mono", "Berkeley Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace',
-    prose: 'AnthropicSerif, "Tiempos Text", Copernicus, "Iowan Old Style", Georgia, serif'
+  open: {
+    ui: '"DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    code: '"JetBrains Mono", ui-monospace, "SFMono-Regular", "Cascadia Mono", Menlo, Consolas, monospace',
+    prose: '"DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   }
 };
 
@@ -13,7 +13,7 @@ const palettes = {
     type: "light",
     shareSurface: "#F0EEE6",
     shareContrast: 42,
-    fonts: fonts.brand,
+    fonts: fonts.open,
     editorBg: "#FAF9F5",
     surface: "#F0EEE6",
     surfaceAlt: "#E8E6DC",
@@ -45,21 +45,21 @@ const palettes = {
     slug: "claude-desktop-light",
     name: "Claude Desktop Light",
     type: "light",
-    shareSurface: "#F7F4ED",
-    shareContrast: 30,
-    fonts: fonts.brand,
-    editorBg: "#F7F4ED",
+    shareSurface: "#F8F5EF",
+    shareContrast: 26,
+    fonts: fonts.open,
+    editorBg: "#F8F5EF",
     surface: "#F2EEE5",
     surfaceAlt: "#ECE7DD",
     surfaceRaised: "#FBF8F2",
     surfaceMuted: "#E7E1D6",
     border: "#D9D3C8",
     borderStrong: "#C5BFB2",
-    fg: "#35312B",
+    fg: "#342F29",
     fgSoft: "#59554D",
     fgMuted: "#8A8478",
-    accent: "#D27D5B",
-    accentStrong: "#C56E4B",
+    accent: "#CF7857",
+    accentStrong: "#C46D4D",
     accentGlow: "#D89D73",
     accentSoft: "#D9A990",
     blue: "#7A92A5",
@@ -70,7 +70,7 @@ const palettes = {
     magenta: "#A37A90",
     cyan: "#85948F",
     cyanSoft: "#C0CBC4",
-    selection: "#D27D5B",
+    selection: "#CF7857",
     shadow: "#2D2924",
     white: "#FFFFFF",
     terminalWhite: "#FBF8F2"

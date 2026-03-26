@@ -11,7 +11,7 @@ Two curated light presets for Codex:
 
 | Variant | File | Surface | Best for |
 |---|---|---:|---|
-| `claude-desktop-light` | `share/claude-desktop-light.txt` | `#F7F4ED` | Daily use, closest to Claude Desktop |
+| `claude-desktop-light` | `share/claude-desktop-light.txt` | `#F8F5EF` | Daily use, closest to Claude Desktop |
 | `anthropic-web-light` | `share/anthropic-web-light.txt` | `#F0EEE6` | Brand feel, closer to anthropic.com |
 
 ## Import Into Codex
@@ -26,16 +26,22 @@ The import dialog expects a `codex-theme-v1:...` share string, not a VS Code the
 
 ## Fonts
 
-Codex can reference local fonts in the theme, but it cannot bundle or download font files for you.
+These presets are designed to be directly importable in Codex with no extra setup.
 
-These presets are tuned for:
+The share strings use a public-font-first stack with system fallbacks:
 
-- UI: `AnthropicSans`
-- Code: `AnthropicMono`
+- UI: `DM Sans`, then platform UI fonts
+- Code: `JetBrains Mono`, then platform monospace fonts
 
-Fallbacks are included in the font stack, but if the Anthropic fonts are not installed locally the result will look less accurate.
+That means:
 
-The example editor font settings live in `settings/anthropic-fonts.example.json`.
+- anyone can paste the share string and get a usable result immediately
+- users who already have `DM Sans` and `JetBrains Mono` installed will get a closer Claude-like feel automatically
+- no private Anthropic fonts are required
+
+Codex still cannot bundle or download font files for you, so perfectly identical typography across every machine is not possible with import strings alone.
+
+The example editor font settings live in `settings/public-fonts.example.json`.
 
 ## Files
 
@@ -47,7 +53,7 @@ share/
   anthropic-web-light.txt
   claude-desktop-light.txt
 settings/
-  anthropic-fonts.example.json
+  public-fonts.example.json
 ```
 
 ## Rebuild
