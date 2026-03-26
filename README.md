@@ -2,23 +2,52 @@
 
 Light and dark presets for Codex, tuned to match Claude Desktop's look and feel.
 
-## Before & After
+## Preview
 
-| Codex Default | Claude Desktop Light |
+| Codex Default | Anthropic Theme |
 |:---:|:---:|
-| ![before](./screenshots/before.png) | ![after](./screenshots/after-claude-desktop-light.png) |
+| ![default](./screenshots/codex_default.jpg) | ![anthropic](./screenshots/codex_anthropic.jpg) |
 
-> Replace the placeholder images above with your own screenshots.
-> Save them in `screenshots/` as `before.png` and `after-claude-desktop-light.png`.
+## Import
 
-## Quick Start
+1. Copy the share string below (or from `share/claude-desktop-light.txt`):
 
-1. Copy the share string from either:
-   - `share/claude-desktop-light.txt`
-   - `share/claude-desktop-dark.txt`
+```
+codex-theme-v1:{"codeThemeId":"codex","variant":"light","theme":{"accent":"#CA7554","contrast":25,"fonts":{"code":"\"JetBrains Mono\", ui-monospace, \"SFMono-Regular\", \"Cascadia Mono\", Menlo, Consolas, monospace","ui":"\"DM Sans\", system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"},"ink":"#38342E","opaqueWindows":true,"semanticColors":{"diffAdded":"#739245","diffRemoved":"#C37967","skill":"#CA7554"},"surface":"#F8F6F1"}}
+```
+
 2. Open Codex → Settings → Themes → **Import**.
-3. Paste the full `codex-theme-v1:...` string.
-4. Done.
+3. Paste the string. Done.
+
+For dark mode, use `share/claude-desktop-dark.txt` instead.
+
+## Fonts (optional)
+
+The theme works out of the box with system fonts. For the closest Anthropic feel, install:
+
+| Font | Download |
+|---|---|
+| **DM Sans** | [Google Fonts](https://fonts.google.com/specimen/DM+Sans) |
+| **JetBrains Mono** | [JetBrains](https://www.jetbrains.com/lp/mono/) |
+
+<details>
+<summary>Install commands</summary>
+
+**macOS (Homebrew)**
+```bash
+brew install --cask font-jetbrains-mono font-dm-sans
+```
+
+**Windows** — Download, select all `.ttf` → right-click → Install for all users.
+
+**Linux**
+```bash
+mkdir -p ~/.local/share/fonts
+# copy .ttf files there
+fc-cache -fv
+```
+
+</details>
 
 ## What Changes
 
@@ -27,101 +56,29 @@ Light and dark presets for Codex, tuned to match Claude Desktop's look and feel.
 | Surface | `#F8F6F1` warm ivory | `#1E1D1B` carbon |
 | Ink | `#38342E` warm dark | `#E8E4DC` warm ivory |
 | Accent | `#CA7554` muted copper | `#CA7554` muted copper |
-| Contrast | 25 (softer layers) | 55 (moderate separation) |
-| UI font | DM Sans → system fallbacks | DM Sans → system fallbacks |
-| Code font | JetBrains Mono → system fallbacks | JetBrains Mono → system fallbacks |
+| Contrast | 25 | 55 |
+| Fonts | DM Sans + JetBrains Mono | DM Sans + JetBrains Mono |
 
-## Fonts
+## Limitations
 
-These presets work immediately with no extra setup — the share strings use public fonts with system fallbacks.
-
-For the best result, install both free fonts:
-
-| Font | Purpose | Download |
-|---|---|---|
-| **DM Sans** | UI font | [Google Fonts](https://fonts.google.com/specimen/DM+Sans) |
-| **JetBrains Mono** | Code font | [JetBrains](https://www.jetbrains.com/lp/mono/) |
-
-<details>
-<summary>macOS install</summary>
-
-**Homebrew (easiest)**
-```bash
-brew install --cask font-jetbrains-mono font-dm-sans
-```
-
-**Manual**
-1. Download both fonts from the links above.
-2. Unzip and copy `.ttf` files to `~/Library/Fonts/`.
-3. Restart Codex.
-
-</details>
-
-<details>
-<summary>Windows install</summary>
-
-1. Download both fonts.
-2. Select all `.ttf` files → right-click → **Install for all users**.
-3. Restart Codex.
-
-</details>
-
-<details>
-<summary>Linux install</summary>
-
-```bash
-mkdir -p ~/.local/share/fonts
-# copy .ttf files to ~/.local/share/fonts/
-fc-cache -fv
-```
-
-</details>
-
-Without these fonts installed, Codex falls back to system defaults — it still looks fine, just not as close to the Anthropic feel.
-
-## Codex Theme Limitations
-
-Codex's `codex-theme-v1` import string only supports these parameters:
-
-| Parameter | Controls |
-|---|---|
-| `surface` | Single background color for the entire app |
-| `ink` | Text color |
-| `accent` | Accent / highlight color |
-| `contrast` | Layer separation intensity (higher = more distinct panels) |
-| `fonts.ui` | UI font stack |
-| `fonts.code` | Code font stack |
-| `opaqueWindows` | Window opacity toggle |
-| `semanticColors` | Diff added/removed and skill badge colors |
-
-**What you cannot control via import:**
-
-- Sidebar and main canvas colors independently (both use `surface`)
-- Font size, weight, or line height
-- Individual panel colors
-- Border colors
-- Remote web font loading
-
-The entire app shares one `surface` color. `contrast` is the only lever to make panels feel more or less distinct from each other.
+Codex import only supports: `surface`, `ink`, `accent`, `contrast`, `fonts`, `opaqueWindows`, `semanticColors`. You cannot independently color the sidebar vs. main canvas — `contrast` is the only lever for panel separation.
 
 ## Files
 
 ```text
-themes/
-  claude-desktop-light.json     VS Code theme JSON (full palette)
-  claude-desktop-dark.json      VS Code theme JSON (full palette)
 share/
-  claude-desktop-light.txt      Codex import share string
-  claude-desktop-dark.txt       Codex import share string
-settings/
-  public-fonts.example.json     Editor font settings (optional)
+  claude-desktop-light.txt      Import string (light)
+  claude-desktop-dark.txt       Import string (dark)
+themes/
+  claude-desktop-light.json     Full VS Code theme
+  claude-desktop-dark.json      Full VS Code theme
 src/
-  theme-spec.mjs                Source of truth for all palettes
+  theme-spec.mjs                Source of truth
 ```
 
 ## Rebuild
 
 ```bash
 npm run build      # regenerate themes/ and share/
-npm run validate   # build + check JSON validity + share string format
+npm run validate   # build + check JSON + share string format
 ```
