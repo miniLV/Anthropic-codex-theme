@@ -21,7 +21,11 @@ codex-theme-v1:{"codeThemeId":"codex","variant":"light","theme":{"accent":"#CA75
 2. Open Codex → Settings → Themes → **Import**.
 3. Paste the string. Done.
 
-For dark mode, use `share/claude-desktop-dark.txt` instead.
+**Dark mode:**
+
+```
+codex-theme-v1:{"codeThemeId":"codex","variant":"dark","theme":{"accent":"#CA7554","contrast":55,"fonts":{"code":"\"JetBrains Mono\", ui-monospace, \"SFMono-Regular\", \"Cascadia Mono\", Menlo, Consolas, monospace","ui":"\"DM Sans\", system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"},"ink":"#E8E4DC","opaqueWindows":true,"semanticColors":{"diffAdded":"#7FA84A","diffRemoved":"#C37967","skill":"#CA7554"},"surface":"#1E1D1B"}}
+```
 
 ## Fonts (optional)
 
