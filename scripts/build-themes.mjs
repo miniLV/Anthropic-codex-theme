@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readdir, unlink, writeFile } from "node:fs/promises";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -11,6 +11,18 @@ const shareDir = resolve(root, "share");
 
 await mkdir(outputDir, { recursive: true });
 await mkdir(shareDir, { recursive: true });
+
+for (const file of await readdir(outputDir)) {
+  if (file.endsWith(".json")) {
+    await unlink(resolve(outputDir, file));
+  }
+}
+
+for (const file of await readdir(shareDir)) {
+  if (file.endsWith(".txt")) {
+    await unlink(resolve(shareDir, file));
+  }
+}
 
 for (const theme of themes) {
   const outputPath = resolve(outputDir, `${theme.slug}.json`);
