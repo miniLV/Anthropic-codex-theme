@@ -1,8 +1,42 @@
+// ---------------------------------------------------------------------------
+// Font stacks
+// ---------------------------------------------------------------------------
+// Anthropic's actual font families (proprietary, must be installed locally):
+//   AnthropicSans, AnthropicSerif, AnthropicMono
+// Their site also loads these commercial/open fonts as secondary choices:
+//   Styrene B (Commercial Type), Tiempos Text, Copernicus, JetBrains Mono
+//
+// We build three tiers:
+//   1. "brand"  – Anthropic proprietary first, then Styrene / JetBrains
+//   2. "system" – best free/OS-bundled look-alikes (no Anthropic fonts needed)
+
+const fonts = {
+  brand: {
+    ui:   'AnthropicSans, "Styrene B", "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    code: 'AnthropicMono, "JetBrains Mono", "Berkeley Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace',
+    prose: 'AnthropicSerif, "Tiempos Text", Copernicus, "Iowan Old Style", Georgia, serif',
+  },
+  system: {
+    ui:   '"DM Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    code: '"JetBrains Mono", "Fira Code", "SF Mono", ui-monospace, Menlo, Consolas, monospace',
+    prose: '"Iowan Old Style", Georgia, "Times New Roman", serif',
+  },
+  streamlit: {
+    ui:   '"Styrene B", "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    code: '"Fira Code", "JetBrains Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace',
+    prose: '"Tiempos Text", "Iowan Old Style", Georgia, serif',
+  },
+};
+
+// ---------------------------------------------------------------------------
+// Color palettes
+// ---------------------------------------------------------------------------
 const palettes = {
   light: {
     slug: "anthropic-light",
     name: "Anthropic Light",
     type: "light",
+    fonts: fonts.brand,
     editorBg: "#FAF9F5",
     surface: "#F0EEE6",
     surfaceAlt: "#E8E6DC",
@@ -30,10 +64,139 @@ const palettes = {
     white: "#FFFFFF",
     terminalWhite: "#FAF9F5"
   },
+  systemLight: {
+    slug: "anthropic-system-light",
+    name: "Anthropic System Light",
+    type: "light",
+    fonts: fonts.system,
+    editorBg: "#F0EEE6",
+    surface: "#E8E6DC",
+    surfaceAlt: "#E3DACC",
+    surfaceRaised: "#FFFFFF",
+    surfaceMuted: "#E3DACC",
+    border: "#D1CFC5",
+    borderStrong: "#B0AEA5",
+    fg: "#141413",
+    fgSoft: "#5E5D59",
+    fgMuted: "#87867F",
+    accent: "#D97757",
+    accentStrong: "#C6613F",
+    accentGlow: "#EDA100",
+    accentSoft: "#D4A27F",
+    blue: "#6396D6",
+    blueStrong: "#146EF5",
+    green: "#788C5D",
+    greenBright: "#6EA100",
+    red: "#ED6A5E",
+    magenta: "#C46686",
+    cyan: "#758696",
+    cyanSoft: "#BCD1CA",
+    selection: "#CC785C",
+    shadow: "#141413",
+    white: "#FFFFFF",
+    terminalWhite: "#FAF9F5"
+  },
+  streamlitLight: {
+    slug: "anthropic-streamlit-light",
+    name: "Anthropic Streamlit Light",
+    type: "light",
+    fonts: fonts.streamlit,
+    editorBg: "#F4F3ED",
+    surface: "#E8E7DD",
+    surfaceAlt: "#ECEBE3",
+    surfaceRaised: "#FBFAF7",
+    surfaceMuted: "#E2E0D5",
+    border: "#D3D2CA",
+    borderStrong: "#BBB7AB",
+    fg: "#3D3A2A",
+    fgSoft: "#5A5747",
+    fgMuted: "#8A8678",
+    accent: "#BB5A38",
+    accentStrong: "#A84D2F",
+    accentGlow: "#C98D5F",
+    accentSoft: "#C88A72",
+    blue: "#6B84A1",
+    blueStrong: "#4C6B8A",
+    green: "#7A8A5D",
+    greenBright: "#6E8C38",
+    red: "#BE6A58",
+    magenta: "#9C6A85",
+    cyan: "#7A8C86",
+    cyanSoft: "#B9C5BC",
+    selection: "#BB5A38",
+    shadow: "#3D3A2A",
+    white: "#FFFFFF",
+    terminalWhite: "#FBFAF7"
+  },
+  claudeDesktopLight: {
+    slug: "claude-desktop-light",
+    name: "Claude Desktop Light",
+    type: "light",
+    fonts: fonts.brand,
+    editorBg: "#F7F4ED",
+    surface: "#F2EEE5",
+    surfaceAlt: "#ECE7DD",
+    surfaceRaised: "#FBF8F2",
+    surfaceMuted: "#E7E1D6",
+    border: "#D9D3C8",
+    borderStrong: "#C5BFB2",
+    fg: "#35312B",
+    fgSoft: "#59554D",
+    fgMuted: "#8A8478",
+    accent: "#D27D5B",
+    accentStrong: "#C56E4B",
+    accentGlow: "#D89D73",
+    accentSoft: "#D9A990",
+    blue: "#7A92A5",
+    blueStrong: "#5B7993",
+    green: "#7D8D69",
+    greenBright: "#739245",
+    red: "#C37967",
+    magenta: "#A37A90",
+    cyan: "#85948F",
+    cyanSoft: "#C0CBC4",
+    selection: "#D27D5B",
+    shadow: "#2D2924",
+    white: "#FFFFFF",
+    terminalWhite: "#FBF8F2"
+  },
   dark: {
     slug: "anthropic-dark",
     name: "Anthropic Dark",
     type: "dark",
+    fonts: fonts.brand,
+    editorBg: "#141413",
+    surface: "#1F1E1D",
+    surfaceAlt: "#2A2927",
+    surfaceRaised: "#3D3D3A",
+    surfaceMuted: "#30302E",
+    border: "#3D3D3A",
+    borderStrong: "#5E5D59",
+    fg: "#F0EEE6",
+    fgSoft: "#B0AEA5",
+    fgMuted: "#87867F",
+    accent: "#D97757",
+    accentStrong: "#C6613F",
+    accentGlow: "#EDA100",
+    accentSoft: "#D4A27F",
+    blue: "#6A9BCC",
+    blueStrong: "#6396D6",
+    green: "#788C5D",
+    greenBright: "#6EA100",
+    red: "#ED6A5E",
+    magenta: "#C46686",
+    cyan: "#758696",
+    cyanSoft: "#BCD1CA",
+    selection: "#CC785C",
+    shadow: "#000000",
+    white: "#FAF9F5",
+    terminalWhite: "#F0EEE6"
+  },
+  systemDark: {
+    slug: "anthropic-system-dark",
+    name: "Anthropic System Dark",
+    type: "dark",
+    fonts: fonts.system,
     editorBg: "#141413",
     surface: "#1F1E1D",
     surfaceAlt: "#2A2927",
@@ -509,51 +672,35 @@ export const themes = Object.values(palettes).map((palette) => ({
   data: buildTheme(palette)
 }));
 
-export const shareThemes = [
-  {
-    slug: "anthropic-light",
+// ---------------------------------------------------------------------------
+// Codex share-string builder
+// ---------------------------------------------------------------------------
+function buildShareTheme(palette) {
+  return {
+    slug: palette.slug,
     data: {
       codeThemeId: "codex",
-      variant: "light",
+      variant: palette.type,
       theme: {
-        accent: "#D97757",
-        contrast: 42,
+        accent: palette.accent,
+        contrast: palette.type === "dark" ? 68
+          : palette.slug === "claude-desktop-light" ? 30
+          : 42,
         fonts: {
-          code: "Anthropic Mono, ui-monospace, \"SFMono-Regular\", Menlo, Consolas, monospace",
-          ui: "Anthropic Sans, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          code: palette.fonts.code,
+          ui: palette.fonts.ui,
         },
-        ink: "#141413",
+        ink: palette.fg,
         opaqueWindows: true,
         semanticColors: {
-          diffAdded: "#6EA100",
-          diffRemoved: "#ED6A5E",
-          skill: "#D97757"
+          diffAdded: palette.greenBright,
+          diffRemoved: palette.red,
+          skill: palette.accent,
         },
-        surface: "#F0EEE6"
-      }
-    }
-  },
-  {
-    slug: "anthropic-dark",
-    data: {
-      codeThemeId: "codex",
-      variant: "dark",
-      theme: {
-        accent: "#D97757",
-        contrast: 68,
-        fonts: {
-          code: "Anthropic Mono, ui-monospace, \"SFMono-Regular\", Menlo, Consolas, monospace",
-          ui: "Anthropic Sans, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
-        },
-        ink: "#F0EEE6",
-        opaqueWindows: true,
-        semanticColors: {
-          diffAdded: "#6EA100",
-          diffRemoved: "#ED6A5E",
-          skill: "#D97757"
-        },
-        surface: "#1F1E1D"
-      }
-    }
-  }
-];
+        surface: palette.surface,
+      },
+    },
+  };
+}
+
+export const shareThemes = Object.values(palettes).map(buildShareTheme);
