@@ -508,3 +508,52 @@ export const themes = Object.values(palettes).map((palette) => ({
   slug: palette.slug,
   data: buildTheme(palette)
 }));
+
+export const shareThemes = [
+  {
+    slug: "anthropic-light",
+    data: {
+      codeThemeId: "codex",
+      variant: "light",
+      theme: {
+        accent: "#D97757",
+        contrast: 42,
+        fonts: {
+          code: "Anthropic Mono, ui-monospace, \"SFMono-Regular\", Menlo, Consolas, monospace",
+          ui: "Anthropic Sans, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+        },
+        ink: "#141413",
+        opaqueWindows: true,
+        semanticColors: {
+          diffAdded: "#6EA100",
+          diffRemoved: "#ED6A5E",
+          skill: "#D97757"
+        },
+        surface: "#F0EEE6"
+      }
+    }
+  },
+  {
+    slug: "anthropic-dark",
+    data: {
+      codeThemeId: "codex",
+      variant: "dark",
+      theme: {
+        accent: "#D97757",
+        contrast: 68,
+        fonts: {
+          code: "Anthropic Mono, ui-monospace, \"SFMono-Regular\", Menlo, Consolas, monospace",
+          ui: "Anthropic Sans, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+        },
+        ink: "#F0EEE6",
+        opaqueWindows: true,
+        semanticColors: {
+          diffAdded: "#6EA100",
+          diffRemoved: "#ED6A5E",
+          skill: "#D97757"
+        },
+        surface: "#1F1E1D"
+      }
+    }
+  }
+];

@@ -14,13 +14,17 @@ The syntax model starts from a Claude-like layout, but the palette is re-tuned a
 
 - `themes/anthropic-light.json`
 - `themes/anthropic-dark.json`
+- `share/anthropic-light.txt`
+- `share/anthropic-dark.txt`
 - `settings/anthropic-fonts.example.json`
 
 ## Import Into Codex
 
 1. Open Codex theme settings.
 2. Use the import button.
-3. Import either `themes/anthropic-light.json` or `themes/anthropic-dark.json`.
+3. Paste the full contents of either `share/anthropic-light.txt` or `share/anthropic-dark.txt`.
+
+The Codex import dialog expects a `codex-theme-v1:...` share string, not a VS Code theme JSON file path.
 
 ## Font Setup
 

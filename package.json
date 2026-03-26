@@ -4,6 +4,6 @@
   "type": "module",
   "scripts": {
     "build": "node ./scripts/build-themes.mjs",
-    "validate": "npm run build && jq empty ./themes/anthropic-light.json ./themes/anthropic-dark.json ./settings/anthropic-fonts.example.json"
+    "validate": "npm run build && jq empty ./themes/anthropic-light.json ./themes/anthropic-dark.json ./settings/anthropic-fonts.example.json && rg '^codex-theme-v1:' ./share/anthropic-light.txt ./share/anthropic-dark.txt"
   }
 }
