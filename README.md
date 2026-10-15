@@ -36,7 +36,7 @@
 ## 导入
 
 1. 复制下面任意一个 share string（也可打开 `share/<slug>.txt` 复制）。
-2. 打开 Codex → Settings → Themes → **Import**。
+2. 打开 Codex → Settings → **Appearance** → 在 Light Theme 或 Dark Theme 卡片里点 **Import**。
 3. 粘贴，完成。
 
 | 主题 | Light | Dark |

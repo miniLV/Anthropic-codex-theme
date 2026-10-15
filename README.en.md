@@ -36,7 +36,7 @@
 ## Import
 
 1. Copy any share string below (or from `share/<slug>.txt`).
-2. Open Codex → Settings → Themes → **Import**.
+2. Open Codex → Settings → **Appearance** → Import under the Light Theme or Dark Theme card.
 3. Paste the string. Done.
 
 | Theme | Light | Dark |
