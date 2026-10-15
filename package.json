@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node ./scripts/build-themes.mjs",
-    "validate": "npm run build && jq empty ./themes/*.json ./settings/public-fonts.example.json && grep -l '^codex-theme-v1:' ./share/*.txt"
+    "validate": "npm run build && jq empty ./themes/*.json ./settings/public-fonts.example.json && grep -l '^codex-theme-v1:' ./share/*.txt",
+    "site": "node ./scripts/build-site.mjs"
   }
 }

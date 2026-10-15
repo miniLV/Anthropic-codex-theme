@@ -1,8 +1,27 @@
-# Anthropic Codex Theme
+<h1 align="center">Anthropic Codex Theme</h1>
 
-[中文](./README.md) | **English**
+<p align="center"><strong>Make OpenAI Codex feel like Claude: warm ivory, soft copper, calm contrast.</strong></p>
+<p align="center">Copy one line, paste it into Codex, done. Nothing to install. Comes with Catppuccin, Nord, Tokyo Night, Gruvbox and One Dark too.</p>
 
-Zero-install themes for Codex: copy a single share string to import Anthropic, Catppuccin, Nord, Tokyo Night, Gruvbox, One Dark, and more.
+<p align="center">
+  <a href="https://minilv.github.io/Anthropic-codex-theme/">Homepage · one-click copy</a> ·
+  <a href="./README.md">简体中文</a> · <strong>English</strong>
+</p>
+
+<p align="center">
+  <img alt="stars" src="https://img.shields.io/github/stars/miniLV/Anthropic-codex-theme?style=flat-square&color=CA7554">
+  <img alt="themes" src="https://img.shields.io/badge/themes-12-CA7554?style=flat-square">
+  <img alt="license" src="https://img.shields.io/badge/license-MIT-739245?style=flat-square">
+</p>
+
+<p align="center"><img src="./screenshots/codex_anthropic.jpg" alt="Codex with the Anthropic theme" width="860"></p>
+
+## Why this one
+
+- **Ten-second setup.** Codex already has a theme import box; this is just the right line to paste.
+- **Feels like Claude.** Ivory `#F8F6F1` surface, copper `#CA7554` accent, warm ink, DM Sans + JetBrains Mono.
+- **Light and dark.** Every theme ships as a pair.
+- **Nothing to break.** No patching, no app files touched. Switch back in Settings any time.
 
 ## Gallery
 
@@ -88,9 +107,6 @@ fc-cache -fv
 | One Light | `#FAFAFA` | `#383A42` | `#4078F2` blue | 15 |
 | One Dark | `#282C34` | `#ABB2BF` | `#61AFEF` blue | 45 |
 
-## Limitations
-
-Codex import only supports: `surface`, `ink`, `accent`, `contrast`, `fonts`, `opaqueWindows`, `semanticColors`. You cannot independently color the sidebar vs. main canvas — `contrast` is the only lever for panel separation.
 
 ## Files
 

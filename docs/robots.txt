@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://minilv.github.io/Anthropic-codex-theme/sitemap.xml

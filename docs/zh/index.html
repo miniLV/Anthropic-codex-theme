@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anthropic Codex 主题 — 让 OpenAI Codex 换上 Claude 的暖色外观</title>
+<meta name="description" content="一行字符串，让 Codex 换上 Claude 那种象牙白配铜色的界面。复制后粘贴到 Codex 设置里的导入即可，不用装任何东西。另含 Catppuccin、Nord、Tokyo Night、Gruvbox、One Dark。免费开源。">
+<link rel="canonical" href="https://minilv.github.io/Anthropic-codex-theme/zh/">
+<link rel="alternate" hreflang="en" href="https://minilv.github.io/Anthropic-codex-theme/">
+<link rel="alternate" hreflang="zh-CN" href="https://minilv.github.io/Anthropic-codex-theme/zh/">
+<link rel="alternate" hreflang="x-default" href="https://minilv.github.io/Anthropic-codex-theme/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://minilv.github.io/Anthropic-codex-theme/zh/">
+<meta property="og:title" content="Anthropic Codex 主题 — 让 OpenAI Codex 换上 Claude 的暖色外观"><meta property="og:description" content="一行字符串，让 Codex 换上 Claude 那种象牙白配铜色的界面。复制后粘贴到 Codex 设置里的导入即可，不用装任何东西。另含 Catppuccin、Nord、Tokyo Night、Gruvbox、One Dark。免费开源。">
+<meta property="og:image" content="https://minilv.github.io/Anthropic-codex-theme/assets/og.png"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F8F6F1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='%23CA7554'/></svg>">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Anthropic Codex Theme","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","description":"一行字符串，让 Codex 换上 Claude 那种象牙白配铜色的界面。复制后粘贴到 Codex 设置里的导入即可，不用装任何东西。另含 Catppuccin、Nord、Tokyo Night、Gruvbox、One Dark。免费开源。","url":"https://minilv.github.io/Anthropic-codex-theme/zh/","inLanguage":"zh-CN","license":"https://opensource.org/licenses/MIT","codeRepository":"https://github.com/miniLV/Anthropic-codex-theme","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<style>
+:root{--bg:#F8F6F1;--ink:#38342E;--soft:#6B6459;--ac:#CA7554;--card:#FFFDF9;--line:#E8E2D6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "DM Sans",ui-sans-serif,system-ui,-apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+a{color:var(--ac)}.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0}nav b{font-size:18px}nav a{text-decoration:none;color:var(--ink);margin-left:22px;font-size:16px}
+.hero{padding:80px 0 56px}h1{font-family:Georgia,"Tiempos Headline","Songti SC",serif;font-weight:400;font-size:clamp(44px,7vw,84px);line-height:1.05;margin:0 0 28px;letter-spacing:-.02em}
+.sub{font-size:22px;color:var(--soft);max-width:640px;margin:0 0 36px}
+.btn{display:inline-block;border:0;border-radius:12px;padding:15px 24px;font:inherit;font-size:17px;cursor:pointer;text-decoration:none;margin:0 12px 12px 0}
+.p{background:var(--ac);color:#fff}.s{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.shot{margin:40px 0 0;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(80,50,20,.35);border:1px solid var(--line)}.shot img{width:100%;display:block}
+section{padding:88px 0}h2{font-family:Georgia,"Songti SC",serif;font-weight:400;font-size:44px;margin:0 0 36px}
+ol.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;counter-reset:s}
+ol.steps li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;counter-increment:s}ol.steps li:before{content:counter(s);display:block;font:400 40px Georgia,serif;color:var(--ac);margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}.card img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;display:block;border-bottom:1px solid var(--line)}
+.meta{padding:20px 22px 24px}.meta h3{margin:0 0 14px;font-size:21px;font-weight:600}.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:10px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}.btns button{font:inherit;font-size:15px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 14px;cursor:pointer;color:var(--ink)}
+.btns button:hover{border-color:var(--ac)}.btns i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px;border:1px solid #0002;vertical-align:-1px}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:24px}.ba figure{margin:0}.ba img{width:100%;border-radius:14px;border:1px solid var(--line)}.ba figcaption{color:var(--soft);margin-top:10px;font-size:16px}
+@media(max-width:760px){.ba{grid-template-columns:1fr}}
+.note{color:var(--soft);font-size:17px}footer{padding:48px 0 64px;color:var(--soft);font-size:15px;border-top:1px solid var(--line)}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:10px;opacity:0;transition:.2s}.toast.on{opacity:1}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Anthropic Codex Theme</b><div><a href="https://github.com/miniLV/Anthropic-codex-theme">GitHub</a><a href="../" hreflang="en">English</a></div></nav>
+<header class="hero">
+  <h1>让 Codex<br>用起来像 Claude。</h1><p class="sub">象牙白底色，柔和的铜色点缀，对比不刺眼。复制一行，粘进 Codex 就好，什么都不用装。</p>
+  <button class="btn p" data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;light&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#CA7554&quot;,&quot;contrast&quot;:25,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#38342E&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#739245&quot;,&quot;diffRemoved&quot;:&quot;#C37967&quot;,&quot;skill&quot;:&quot;#CA7554&quot;},&quot;surface&quot;:&quot;#F8F6F1&quot;}}">复制 Anthropic 浅色</button><a class="btn s" href="https://github.com/miniLV/Anthropic-codex-theme">去 GitHub 看看 →</a>
+  <div class="shot"><img src="../assets/codex_anthropic.jpg" alt="OpenAI Codex with the Anthropic theme"></div>
+</header>
+<section><h2>三步，十秒钟</h2><ol class="steps"><li>在下面挑一个主题，点 <b>复制</b>。</li><li>打开 Codex → <b>Settings</b> → <b>Themes</b> → <b>Import</b>。</li><li>粘贴，确认。</li></ol></section>
+<section><h2>主题</h2><div class="grid">
+      <article class="card">
+        <img src="../assets/codex_anthropic.jpg" alt="Anthropic theme in Codex" loading="lazy">
+        <div class="meta"><h3><span class="dot" style="background:#CA7554"></span>Anthropic</h3>
+          <div class="btns">
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;light&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#CA7554&quot;,&quot;contrast&quot;:25,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#38342E&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#739245&quot;,&quot;diffRemoved&quot;:&quot;#C37967&quot;,&quot;skill&quot;:&quot;#CA7554&quot;},&quot;surface&quot;:&quot;#F8F6F1&quot;}}"><i style="background:#F8F6F1"></i>浅色 · 复制</button>
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;dark&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#CA7554&quot;,&quot;contrast&quot;:55,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#E8E4DC&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#7FA84A&quot;,&quot;diffRemoved&quot;:&quot;#C37967&quot;,&quot;skill&quot;:&quot;#CA7554&quot;},&quot;surface&quot;:&quot;#1E1D1B&quot;}}"><i style="background:#1E1D1B"></i>深色 · 复制</button>
+          </div></div>
+      </article>
+      <article class="card">
+        <img src="../assets/codex_catppuccin.jpg" alt="Catppuccin theme in Codex" loading="lazy">
+        <div class="meta"><h3><span class="dot" style="background:#FAB387"></span>Catppuccin</h3>
+          <div class="btns">
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;light&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#FE640B&quot;,&quot;contrast&quot;:20,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#4C4F69&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#40A02B&quot;,&quot;diffRemoved&quot;:&quot;#D20F39&quot;,&quot;skill&quot;:&quot;#FE640B&quot;},&quot;surface&quot;:&quot;#EFF1F5&quot;}}"><i style="background:#EFF1F5"></i>浅色 · 复制</button>
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;dark&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#FAB387&quot;,&quot;contrast&quot;:45,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#CDD6F4&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#A6E3A1&quot;,&quot;diffRemoved&quot;:&quot;#F38BA8&quot;,&quot;skill&quot;:&quot;#FAB387&quot;},&quot;surface&quot;:&quot;#1E1E2E&quot;}}"><i style="background:#1E1E2E"></i>深色 · 复制</button>
+          </div></div>
+      </article>
+      <article class="card">
+        <img src="../assets/codex_nord.jpg" alt="Nord theme in Codex" loading="lazy">
+        <div class="meta"><h3><span class="dot" style="background:#88C0D0"></span>Nord</h3>
+          <div class="btns">
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;light&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#5E81AC&quot;,&quot;contrast&quot;:18,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#2E3440&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#A3BE8C&quot;,&quot;diffRemoved&quot;:&quot;#BF616A&quot;,&quot;skill&quot;:&quot;#5E81AC&quot;},&quot;surface&quot;:&quot;#ECEFF4&quot;}}"><i style="background:#ECEFF4"></i>浅色 · 复制</button>
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;dark&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#88C0D0&quot;,&quot;contrast&quot;:40,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#D8DEE9&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#A3BE8C&quot;,&quot;diffRemoved&quot;:&quot;#BF616A&quot;,&quot;skill&quot;:&quot;#88C0D0&quot;},&quot;surface&quot;:&quot;#2E3440&quot;}}"><i style="background:#2E3440"></i>深色 · 复制</button>
+          </div></div>
+      </article>
+      <article class="card">
+        <img src="../assets/codex_tokyo-night.jpg" alt="Tokyo Night theme in Codex" loading="lazy">
+        <div class="meta"><h3><span class="dot" style="background:#7AA2F7"></span>Tokyo Night</h3>
+          <div class="btns">
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;light&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#2E7DE9&quot;,&quot;contrast&quot;:20,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#343B59&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#587539&quot;,&quot;diffRemoved&quot;:&quot;#F52A65&quot;,&quot;skill&quot;:&quot;#2E7DE9&quot;},&quot;surface&quot;:&quot;#E1E2E7&quot;}}"><i style="background:#E1E2E7"></i>浅色 · 复制</button>
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;dark&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#7AA2F7&quot;,&quot;contrast&quot;:50,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#C0CAF5&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#9ECE6A&quot;,&quot;diffRemoved&quot;:&quot;#F7768E&quot;,&quot;skill&quot;:&quot;#7AA2F7&quot;},&quot;surface&quot;:&quot;#1A1B26&quot;}}"><i style="background:#1A1B26"></i>深色 · 复制</button>
+          </div></div>
+      </article>
+      <article class="card">
+        <img src="../assets/codex_gruvbox.jpg" alt="Gruvbox theme in Codex" loading="lazy">
+        <div class="meta"><h3><span class="dot" style="background:#FE8019"></span>Gruvbox</h3>
+          <div class="btns">
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;light&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#D65D0E&quot;,&quot;contrast&quot;:22,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#3C3836&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#79740E&quot;,&quot;diffRemoved&quot;:&quot;#CC241D&quot;,&quot;skill&quot;:&quot;#D65D0E&quot;},&quot;surface&quot;:&quot;#FBF1C7&quot;}}"><i style="background:#FBF1C7"></i>浅色 · 复制</button>
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;dark&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#FE8019&quot;,&quot;contrast&quot;:45,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#EBDBB2&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#B8BB26&quot;,&quot;diffRemoved&quot;:&quot;#FB4934&quot;,&quot;skill&quot;:&quot;#FE8019&quot;},&quot;surface&quot;:&quot;#282828&quot;}}"><i style="background:#282828"></i>深色 · 复制</button>
+          </div></div>
+      </article>
+      <article class="card">
+        <img src="../assets/codex_one-dark.jpg" alt="One Dark / Light theme in Codex" loading="lazy">
+        <div class="meta"><h3><span class="dot" style="background:#61AFEF"></span>One Dark / Light</h3>
+          <div class="btns">
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;light&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#4078F2&quot;,&quot;contrast&quot;:15,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#383A42&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#50A14F&quot;,&quot;diffRemoved&quot;:&quot;#E45649&quot;,&quot;skill&quot;:&quot;#4078F2&quot;},&quot;surface&quot;:&quot;#FAFAFA&quot;}}"><i style="background:#FAFAFA"></i>浅色 · 复制</button>
+            <button data-s="codex-theme-v1:{&quot;codeThemeId&quot;:&quot;codex&quot;,&quot;variant&quot;:&quot;dark&quot;,&quot;theme&quot;:{&quot;accent&quot;:&quot;#61AFEF&quot;,&quot;contrast&quot;:45,&quot;fonts&quot;:{&quot;code&quot;:&quot;\&quot;JetBrains Mono\&quot;, ui-monospace, \&quot;SFMono-Regular\&quot;, \&quot;Cascadia Mono\&quot;, Menlo, Consolas, monospace&quot;,&quot;ui&quot;:&quot;\&quot;DM Sans\&quot;, system-ui, -apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, \&quot;Helvetica Neue\&quot;, Arial, sans-serif&quot;},&quot;ink&quot;:&quot;#ABB2BF&quot;,&quot;opaqueWindows&quot;:true,&quot;semanticColors&quot;:{&quot;diffAdded&quot;:&quot;#98C379&quot;,&quot;diffRemoved&quot;:&quot;#E06C75&quot;,&quot;skill&quot;:&quot;#61AFEF&quot;},&quot;surface&quot;:&quot;#282C34&quot;}}"><i style="background:#282C34"></i>深色 · 复制</button>
+          </div></div>
+      </article></div><p class="note" style="margin-top:32px">想要更接近原版的观感，可以装上 <a href="https://fonts.google.com/specimen/DM+Sans">DM Sans</a> 和 <a href="https://www.jetbrains.com/lp/mono/">JetBrains Mono</a>。不装也能用。</p></section>
+<section><h2>换前换后</h2><div class="ba"><figure><img src="../assets/codex_default.jpg" alt="Codex 默认" loading="lazy"><figcaption>Codex 默认</figcaption></figure><figure><img src="../assets/codex_anthropic.jpg" alt="换上 Anthropic 主题" loading="lazy"><figcaption>换上 Anthropic 主题</figcaption></figure></div></section>
+<footer>MIT 开源。与 Anthropic、OpenAI 没有任何关联。 · <a href="https://github.com/miniLV/Anthropic-codex-theme">GitHub</a></footer>
+</div>
+<div class="toast" id="t">已复制</div>
+<script>document.querySelectorAll('[data-s]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.s)}catch(e){const a=document.createElement('textarea');a.value=b.dataset.s;document.body.append(a);a.select();document.execCommand('copy');a.remove()}const t=document.getElementById('t');t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1400)})</script>
+</body></html>

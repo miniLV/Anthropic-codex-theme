@@ -1,8 +1,27 @@
-# Anthropic Codex Theme
+<h1 align="center">Anthropic Codex Theme</h1>
 
-**中文** | [English](./README_EN.md)
+<p align="center"><strong>让 OpenAI Codex 换上 Claude 的样子：象牙白底色，柔和铜色点缀，对比不刺眼。</strong></p>
+<p align="center">复制一行，粘进 Codex，就好了。什么都不用装。顺带还有 Catppuccin、Nord、Tokyo Night、Gruvbox、One Dark。</p>
 
-为 Codex 打造的零安装主题集合：复制一行 share string，即可在 Codex 里导入 Anthropic、Catppuccin、Nord、Tokyo Night、Gruvbox、One Dark 等主题。
+<p align="center">
+  <a href="https://minilv.github.io/Anthropic-codex-theme/zh/">主页 · 一键复制</a> ·
+  <strong>简体中文</strong> · <a href="./README.en.md">English</a>
+</p>
+
+<p align="center">
+  <img alt="stars" src="https://img.shields.io/github/stars/miniLV/Anthropic-codex-theme?style=flat-square&color=CA7554">
+  <img alt="themes" src="https://img.shields.io/badge/themes-12-CA7554?style=flat-square">
+  <img alt="license" src="https://img.shields.io/badge/license-MIT-739245?style=flat-square">
+</p>
+
+<p align="center"><img src="./screenshots/codex_anthropic.jpg" alt="换上 Anthropic 主题的 Codex" width="860"></p>
+
+## 为什么用它
+
+- **十秒搞定。** Codex 自带主题导入框，这里给你的就是要粘进去的那一行。
+- **就是 Claude 的感觉。** 象牙白 `#F8F6F1` 底，铜色 `#CA7554` 强调，暖色文字，DM Sans + JetBrains Mono。
+- **浅色深色都有。** 每个主题都是成对的。
+- **不会弄坏东西。** 不改安装包，不动任何文件。想换回去，在设置里点一下。
 
 ## 主题画廊
 
@@ -88,9 +107,6 @@ fc-cache -fv
 | One Light | `#FAFAFA` | `#383A42` | `#4078F2` 蓝 | 15 |
 | One Dark | `#282C34` | `#ABB2BF` | `#61AFEF` 蓝 | 45 |
 
-## 限制
-
-Codex 的 import 只支持：`surface`、`ink`、`accent`、`contrast`、`fonts`、`opaqueWindows`、`semanticColors`。侧边栏和主内容区无法分别配色，`contrast` 是唯一能调节面板层次感的参数。
 
 ## 文件
 
